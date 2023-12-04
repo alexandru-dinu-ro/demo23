@@ -1,4 +1,4 @@
-package starter.step_definitions;
+package org.example.step_definitions;
 
 import static net.serenitybdd.rest.SerenityRest.given;
 import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
