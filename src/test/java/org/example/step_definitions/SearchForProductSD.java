@@ -17,4 +17,9 @@ public class SearchForProductSD {
     public void user_should_receive_response_status_code(int expected_status_code) {
         restAssuredThat(response -> response.statusCode(expected_status_code));
     }
+
+    @Then("user should receive response body containing {int} items")
+    public void user_should_receive_response_body_containing_items(int expected_item_count) {
+
+    }
 }

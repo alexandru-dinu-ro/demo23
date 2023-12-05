@@ -23,3 +23,15 @@ Feature: Search for product
       | cucumber | 404                  |
       | rice     | 404                  |
       | water    | 404                  |
+
+  @search_for_product @positive
+  Scenario Outline: API call to verify product stock.
+    When user calls the search product endpoint for "<product>"
+    Then user should receive response body containing <expected_item_count> items
+
+    Examples:
+      | product | expected_item_count |
+      | orange  | 0                   |
+      | apple   | 0                   |
+      | pasta   | 99                  |
+      | cola    | 99                  |
