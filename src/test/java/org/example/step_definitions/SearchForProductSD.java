@@ -26,7 +26,13 @@ public class SearchForProductSD {
 
     @Then("user should receive response body containing {int} items")
     public void user_should_receive_response_body_containing_items(int expected_item_count) {
-        Assert.assertEquals(expected_item_count,
+        Assert.assertEquals("Incorrect number of items.", expected_item_count,
                 response.jsonPath().getList("", Product.class).size());
+    }
+
+    @Then("user should receive response body containing an error message")
+    public void user_should_receive_response_body_containing_an_error_message() {
+        Assert.assertEquals("Incorrect error message.", "Not found",
+                response.jsonPath().get("detail.message"));
     }
 }
