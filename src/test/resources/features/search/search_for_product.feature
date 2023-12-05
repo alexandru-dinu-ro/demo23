@@ -1,6 +1,7 @@
+@search_for_product
 Feature: Search for product
 
-  @search_for_product @positive
+  @positive
   Scenario Outline: API call to valid search product endpoint returns 200 response status code.
     When user calls the search product endpoint for "<product>"
     Then user should receive response status code <expected_status_code>
@@ -12,7 +13,7 @@ Feature: Search for product
       | pasta   | 200                  |
       | cola    | 200                  |
 
-  @search_for_product @negative
+  @negative
   Scenario Outline: API call to invalid search product endpoint returns 404 response status code.
     When user calls the search product endpoint for "<product>"
     Then user should receive response status code <expected_status_code>
@@ -24,7 +25,7 @@ Feature: Search for product
       | rice     | 404                  |
       | water    | 404                  |
 
-  @search_for_product @positive
+  @positive
   Scenario Outline: API call to verify product stock.
     When user calls the search product endpoint for "<product>"
     Then user should receive response body containing <expected_item_count> items
@@ -33,5 +34,5 @@ Feature: Search for product
       | product | expected_item_count |
       | orange  | 0                   |
       | apple   | 0                   |
-      | pasta   | 99                  |
-      | cola    | 99                  |
+      | pasta   | 20                  |
+      | cola    | 20                  |
