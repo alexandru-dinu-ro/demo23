@@ -28,5 +28,5 @@ jobs:
       - name: Upload report
         uses: actions/upload-artifact@v3
         with:
-#          name: serenity_report
+          name: serenity_report
           path: target/site/serenity
