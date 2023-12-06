@@ -2,16 +2,17 @@
 
 ### Changes:
 
+- removed all gradle related files and folders (not needed)
+- updated .github/workflows/maven.yml (to run tests on GitHub CI)
 - removed .idea/ (not needed)
 - removed .m2/ (not needed)
-- removed all gradle related files and folders (not needed)
 - removed history/ (not needed)
 - removed src/main/ (not needed)
 - removed src/test/java/starter/stepdefinitions/CarsAPI.java (not needed)
 - renamed src/test/java/starter/stepdefinitions/ -> src/test/java/org/example/step_definitions/ (
   personal preference)
 - renamed SearchStepDefinitions.java -> SearchForProductSD.java (more specific name)
-- updated SearchForProductSD.java (removed unnecessary methods)
+- updated SearchForProductSD.java (removed unnecessary methods, added new ones)
 - updated TestRunner.java (added glue, tags and report path)
 - removed src/test/resources/serenity.conf (not needed)
 - updated src/test/resources/logback-test.xml (updated logging level)
