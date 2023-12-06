@@ -2,7 +2,7 @@
 
 ### Changes:
 
-- removed all gradle related files and folders (not needed)
+- removed all Gradle related files and folders (not needed)
 - updated .github/workflows/maven.yml (to run tests on GitHub CI)
 - removed .idea/ (not needed)
 - removed .m2/ (not needed)
@@ -13,7 +13,7 @@
   personal preference)
 - renamed SearchStepDefinitions.java -> SearchForProductSD.java (more specific name)
 - updated SearchForProductSD.java (removed unnecessary methods, added new ones)
-- updated TestRunner.java (added glue, tags and report path)
+- updated TestRunner.java (glue, features, tags)
 - removed src/test/resources/serenity.conf (not needed)
 - updated src/test/resources/logback-test.xml (updated logging level)
 - renamed src/test/resources/features/search/post_product.feature -> search_for_product.feature (
@@ -36,7 +36,7 @@
 - build project: mvn -B package --file pom.xml
 - run tests: mvn verify
 - generate aggregated serenity report: mvn serenity:aggregate --file pom.xml
-- location of the report file is: target/report/report.html
+- location of the serenity report file is: target/site/serenity/index.html
 
 ### In order to modify the test suite, update the following parameters in TestRunner.java:
 

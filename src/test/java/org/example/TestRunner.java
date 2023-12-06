@@ -6,11 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        plugin = {"pretty", "html:target/report/report.html"},
         glue = "org/example/step_definitions",
         features = "src/test/resources/features",
-        tags = "@search_for_product",
-        publish = true)
+        tags = "@search_for_product"
+)
 public class TestRunner {
 
 }
